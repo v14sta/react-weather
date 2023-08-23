@@ -1,0 +1,56 @@
+.App {
+  background-color: rgb(179, 227, 255);
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  margin-top: 65px;
+  margin-left: 375px;
+  margin-right: 375px;
+}
+.Footer {
+  font-family: sans-serif;
+  margin-left: 375px;
+  margin-right: 375px;
+}
+.container {
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0px;
+  padding-left: 0px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.degree {
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 1;
+  margin-left: 8px;
+}
+.Wdegree {
+  font-weight: 400;
+  font-size: 22px;
+  position: relative;
+  top: -20px;
+}
+.Form {
+  display: block;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  display: list-item;
+}
+.image {
+  margin-top: 0px;
+}
+.Weather {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
