@@ -66,8 +66,8 @@ export default function Form() {
         <div className="row">
           <div className="col-6">
             <div className="weather-temperature justify-content-end">
-              <WeatherIcon code={weatherData.icon} />
-              <strong className="degree">{weatherData.temperature}</strong>
+              <WeatherIcon className="icon" code={weatherData.icon} size={74} />
+              <span className="degree">{weatherData.temperature}</span>
               <span className="Wdegree">°C</span>
             </div>
           </div>
