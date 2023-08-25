@@ -4,7 +4,7 @@ import "./styles.css";
 import WeatherIcon from "./WeatherIcon.js";
 import ConvertDate from "./ConvertDate.js";
 
-export default function Form(props) {
+export default function Form() {
   let [weatherData, setWeatherData] = useState({ ready: false });
   let [city, setCity] = useState("Tehran");
 
@@ -17,7 +17,7 @@ export default function Form(props) {
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      wind: response.data.wind.speed,
+      wind: Math.round(response.data.wind.speed),
       city: response.data.name,
     });
   }
@@ -35,7 +35,6 @@ export default function Form(props) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(url).then(handleResponse);
   }
-
   //------------------------------------
   if (weatherData.ready) {
     return (
@@ -89,7 +88,7 @@ export default function Form(props) {
       </div>
     );
   } else {
-    submitSearch();
+    search();
     return "Loading...";
   }
 }
