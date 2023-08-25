@@ -6,7 +6,7 @@ import ConvertDate from "./ConvertDate.js";
 
 export default function Form(props) {
   let [weatherData, setWeatherData] = useState({ ready: false });
-  let [city, setCity] = useState(props.defaultCity);
+  let [city, setCity] = useState("Tehran");
 
   function handleResponse(response) {
     setWeatherData({
