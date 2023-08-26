@@ -38,6 +38,15 @@
   padding-right: 55px;
 }
 
+.WeatherForecast {
+  text-align: center;
+}
+
+.WeatherForecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+
 h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
