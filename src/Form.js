@@ -14,12 +14,12 @@ export default function Form() {
     setWeatherData({
       ready: true,
       coordinates: response.data.coordinates,
-      temperature: response.data.temperature.current,
+      temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       icon: response.data.condition.icon,
-      wind: response.data.wind.speed,
+      wind: Math.round(response.data.wind.speed),
       city: response.data.city,
     });
   }
@@ -32,7 +32,7 @@ export default function Form() {
     setCity(event.target.value);
   }
   function search() {
-    let apiKey = "f3887e262c88d1158f7e2ef4998e234c";
+    let apiKey = "3ef468137b143cef0883eb4oac3e2fat";
     let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(url).then(handleResponse);
   }
@@ -71,7 +71,7 @@ export default function Form() {
                 <WeatherIcon
                   className="icon"
                   code={weatherData.icon}
-                  size={74}
+                  size={48}
                 />
                 <span className="degree">{weatherData.temperature}</span>
                 <span className="Wdegree">°C</span>
@@ -84,14 +84,18 @@ export default function Form() {
                 </li>
                 <li className="text-capitalize">{weatherData.description}</li>
                 <li>
-                  <strong>Humidity:</strong> {weatherData.humidity}%,{" "}
+                  <strong>Humidity:</strong>{" "}
+                  <span className="humid">{weatherData.humidity}%</span>
+                </li>
+                <li>
                   <strong>Wind: </strong>
-                  {weatherData.wind}km/h
+                  <span className="wind">{weatherData.wind}km/h</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+        <hr /> <br />
         <Forecast
           coordinates={weatherData.coordinates}
           cit={weatherData.city}

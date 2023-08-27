@@ -37,16 +37,34 @@
   padding-left: 55px;
   padding-right: 55px;
 }
-
+.WeatherForecast-temperatures {
+  margin-top: 10px;
+}
 .WeatherForecast {
   text-align: center;
 }
+.btn {
+  border-color: #810335;
+  background-color: #810335;
+}
 
 .WeatherForecast-temperature-min {
+  color: #e60073;
   opacity: 0.6;
   margin-left: 5px;
 }
-
+.WeatherForecast-day {
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+.humid {
+  color: #e60073;
+  opacity: 0.8;
+}
+.wind {
+  color: #e60073;
+  opacity: 0.8;
+}
 h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;

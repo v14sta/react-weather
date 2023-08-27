@@ -17,7 +17,7 @@ export default function Forecast(props) {
     //console.log(response.data.daily);
   }
   function load() {
-    let apiKey = "f3887e262c88d1158f7e2ef4998e234c";
+    let apiKey = "3ef468137b143cef0883eb4oac3e2fat";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.cit}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
